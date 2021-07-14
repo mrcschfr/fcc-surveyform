@@ -9,12 +9,12 @@
   </head>
   <body>
     <header>
-      <div id="title">
-        <h1>Coffee Bar Booking Form</h1>
+      <div id="title-container">
+        <h1 id="title">Coffee Bar Booking Form</h1>
       </div>
-      <div id="description">
-        <p>This is an example project for the <b>Responsive Web Design certification</b> at freeCodeCamp.</p>
-        <p>It's a booking request form for a mobile coffee bar that asks the user for information the caterer needs to know to create a quote.</p>
+      <div id="description-container">
+        <p id="description">This is an example project for the <b>Responsive Web Design certification</b> at freeCodeCamp.</p>
+        <p id="purpose">It's a booking request form for a mobile coffee bar that asks the user for information the caterer needs to know to create a quote.</p>
       </div>
     </header>
     <main>
@@ -26,22 +26,23 @@
           <h2>Request a quote</h2>
         </div>
     </div>
-      <form>
+      <form id="survey-form">
         <div id="form-name" class="form-group">
-          <label for="form-name-input">Your name</label>
-          <input type="text" id="form-name-input" placeholder="Please enter your name">
+          <label id="name-label" for="name">Your name</label>
+          <input type="text" id="name" placeholder="Please enter your name" required>
         </div>
-        <div id="form-mail" class="form-group">
-          <label for="form-mail-input">Your email address</label>
-          <input type="email" id="form-mail-input" placeholder="Please provide your email address">
+        <div id="form-email" class="form-group">
+          <label id="email-label" for="email">Your email address</label>
+          <input type="email" id="email" placeholder="Please provide your email address" required>
         </div>
-        <div id="form-participants" class="form-group">
-          <label for="form-participants-input">Number of participants</label>
-          <input type="number" id="form-participants-input" placeholder="How many guests are to be catered?">
+        <div id="form-number" class="form-group">
+          <label id="number-label" for="number">Number of participants</label>
+          <input type="number" id="number" min="10" max="5000" placeholder="How many guests are to be catered?">
         </div>
-        <div id="form-service" class="form-group">
-          <label for="form-service-input">Type of service</label>
-          <select id="form-service-input">
+        <div id="form-dropdown" class="form-group">
+          <label for="dropdown">Type of service</label>
+          <select id="dropdown">
+            <option disabled selected></option>
             <option value="coffeebar">Coffee bar</option>
             <option value="mobilebarista">Barista course</option>
             <option value="catering">Coffee catering</option>
@@ -91,7 +92,7 @@
           <textarea id="form-comments-textarea" rows="4"></textarea>        
         </div>
         <div id="form-submit">
-          <button type="submit">Send request</button>
+          <button id="submit" type="submit">Send request</button>
         </div>
       </form>
     </main>
